@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pustaka Ilmu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fcf6dc; /* Latar belakang krem pucat seperti di gambar */
+            color: #2b1d0c; 
+        } 
+
+         header {
+        background: #4a3429; 
+        color: white;
+        text-align: center;
+        padding: 30px;
+		}
+
+		header h1 {
+        margin: 0 0 10px 0;
+		}
+
+		header p {
+        text-align: center;
+        margin: 0;
+        color: #d7ccc8;
+		}
+		header p {
+            font-style: italic;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .menu {
+            background-color: #895129; /* Cokelat Kayu */
+            text-align: center;
+            padding: 0;
+        }
+
+        .menu a {
+            display: inline-block;
+            color: #ffffff; 
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background-color: #6e3f1f; 
+            color: white;
+        }
+
+        /* Container Utama dengan Flexbox untuk Layout Konten & Sidebar */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 25px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            flex: 3; /* Mengambil ruang dominan di kiri (~80%) */
+            background-color: #bceecb; /* Hijau Mint lembut */
+            border-left: 8px solid #2d5a37; /* Aksen garis tebal di kiri */
+            border-radius: 12px;
+            padding: 30px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* SIDEBAR BARU: Mengadopsi struktur kategori dari gambar */
+        .sidebar {
+            flex: 1; /* Mengambil ruang kanan */
+            background-color: #ffffff;
+            border: 1px solid #c2e2cc;
+            border-radius: 12px;
+            padding: 20px;
+            box-sizing: border-box;
+            align-self: flex-start;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .sidebar h2 {
+            color: #2d5a37 !important;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid #895129;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .sidebar-item:last-child {
+            border-bottom: none;
+        }
+
+        .badge {
+            background-color: #bceecb;
+            color: #2d5a37;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+
+        /* Konten H2 berubah menjadi cokelat dengan garis bawah hijau */
+        h2, #judul {
+            color: #895129 !important; 
+            border-bottom: 2px solid #bceecb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .content p {
+            color: #2b1d0c;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Highlight teks dengan latar krem gelap seperti di gambar */
+        .highlight {
+            background-color: #fdfbe7;
+            color: #2d5a37; 
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #e6dfb8;
+        }
+
+        .info-penting {
+            background-color: #ffffff; 
+            color: #2b1d0c; 
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #895129;
+        }
+
+        .info-penting h3 {
+            color: #895129;
+            margin-top: 0;
+        }
+
+        .formulir {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #895129; 
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #2d5a37; /* Form diubah menjadi hijau kebun agar kontras */
+            color: #ffffff; 
+        }
+
+        .formulir h3 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        .formulir label {
+            color: #ffffff;
+        }
+
+        .formulir input[type="text"], .formulir select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .formulir input[type="submit"] {
+            background-color: #895129;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .formulir input[type="submit"]:hover {
+            background-color: #6e3f1f;
+        }
+
+        footer {
+        clear: both;
+        background: #4a3429; 
+        color: #d7ccc8;
+        text-align: center;
+        padding: 25px;
+        margin-top: 50px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+        /* Responsif untuk layar kecil/HP */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pustaka Ilmu</h1>
+    <p>Portal Bacaan Digital Terlengkap</p>
+</header>
+
+<div class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="koleksi.html">Koleksi</a>
+    <a href="kontak.html">Kontak</a>
+</div>
+
+<div class="main-container">
+
+    <div class="content">
+
+        <h2>Mulai Petualangan Literasimu di Pustaka Ilmu!</h2>
+
+        <p>
+            Selamat datang di Pustaka Ilmu, gerbang digital menuju ilmu pengetahuan tanpa batas! Kami percaya bahwa membaca adalah kunci membuka masa depan, 
+            dan di sini kami menyediakan akses literasi terbaik gratis untuk mendukung perjalanan belajarmu.
+        </p>
+
+        <p>
+            Pustaka Ilmu merupakan platform perpustakaan digital yang berkomitmen untuk menyediakan akses literasi berkualitas bagi semua kalangan. 
+            Pengguna dapat mengekplorasi dan memperluas wawasan mengenai
+            <span class="highlight">Buku Pelajaran</span>,
+            <span class="highlight">Sejarah Dunia & Nasional</span>, serta
+            <span class="highlight">Koleksi Novel Populer</span>.
+        </p>
+
+        <div class="info-penting">
+            <h3>Informasi Penting</h3>
+            <p>
+                Gunakan menu Koleksi untuk langsung membaca buku secara online atau pilih menu <b>Kategori</b> untuk mencari buku berdasarkan bidang studi dan genre yang Anda minati. Semua buku dapat diakses secara gratis selama 24 jam.
+            </p>
+        </div>
+     
+        <div class="formulir">
+            <h3>Form Pendaftaran</h3>
+            <form>
+                <label>Nama</label><br>
+                <input type="text"><br><br>
+
+                <label>Profesi</label><br>
+                <select>
+                    <option>Pelajar/Mahasiswa</option>
+                    <option>Guru/Dosen</option>
+                    <option>Masyarakat Umum</option>
+                </select><br><br>
+
+                <input type="submit" value="Daftar">
+            </form>
+        </div>
+
+        <h3>Ilustrasi Pustaka (SVG)</h3>
+        <svg width="250" height="250" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="125" cy="195" rx="90" ry="10" fill="#e0e0e0" />
+            <path d="M 45 145 Q 125 175 205 145 L 205 175 Q 125 205 45 175 Z" fill="#b32424" />
+            <path d="M 45 140 Q 125 170 205 140 L 205 170 Q 125 200 45 170 Z" fill="#f0f0f0" />
+            <path d="M 45 142 Q 125 172 205 142 L 205 172 Q 125 202 45 172 Z" fill="#e0e0e0" />
+            <path d="M 40 140 Q 125 170 210 140 L 210 145 Q 125 175 40 145 Z" fill="#d32f2f" />
+            <path d="M 125 160 Q 85 155 45 140 L 45 110 Q 85 125 125 130 Z" fill="#ffffff" stroke="#ccc" stroke-width="0.5" />
+            <path d="M 125 160 Q 165 155 205 140 L 205 110 Q 165 125 125 130 Z" fill="#f9f9f9" stroke="#ccc" stroke-width="0.5" />
+            <line x1="60" y1="123" x2="110" y2="132" stroke="#99aab5" stroke-width="2" stroke-linecap="round" />
+            <line x1="60" y1="133" x2="110" y2="142" stroke="#99aab5" stroke-width="2" stroke-linecap="round" />
+            <line x1="60" y1="143" x2="100" y2="151" stroke="#99aab5" stroke-width="2" stroke-linecap="round" />
+            <line x1="140" y1="132" x2="190" y2="123" stroke="#99aab5" stroke-width="2" stroke-linecap="round" />
+            <line x1="140" y1="142" x2="190" y2="133" stroke="#99aab5" stroke-width="2" stroke-linecap="round" />
+            <line x1="140" y1="151" x2="180" y2="143" stroke="#99aab5" stroke-width="2" stroke-linecap="round" />
+            <path d="M 125 130 L 125 160" stroke="#b0bec5" stroke-width="2" />
+            <g transform="translate(20, -10) rotate(15, 140, 90)">
+                <path d="M 140 90 C 135 60, 150 30, 175 15 C 165 40, 160 75, 145 100 Z" fill="#1e88e5" />
+                <path d="M 140 90 C 125 70, 135 45, 155 28 C 150 48, 148 72, 143 85 Z" fill="#1565c0" opacity="0.7" />
+                <path d="M 143 85 L 135 115" stroke="#cfd8dc" stroke-width="3" stroke-linecap="round" />
+                <polygon points="135,113 131,125 135,128 139,125" fill="#ffd54f" stroke="#ffb300" stroke-width="0.5" />
+                <line x1="135" y1="120" x2="135" y2="128" stroke="#5d4037" stroke-width="0.5" />
+            </g>
+            <circle cx="75" cy="55" r="3" fill="#ffd54f" />
+            <circle cx="185" cy="45" r="2" fill="#ffd54f" />
+            <polygon points="125,35 127,42 134,44 127,46 125,53 123,46 116,44 123,42" fill="#ffd54f" />
+        </svg>
+
+    </div>
+
+    <div class="sidebar">
+        <h2>Kategori Buku</h2>
+        <ul class="sidebar-list">
+            <li class="sidebar-item">Fiksi Populer <span class="badge">120</span></li>
+            <li class="sidebar-item">Novel Romansa <span class="badge">85</span></li>
+            <li class="sidebar-item">Misteri & Thriller <span class="badge">60</span></li>
+            <li class="sidebar-item">Buku Anak <span class="badge">150</span></li>
+            <li class="sidebar-item">Pendidikan & Sekolah <span class="badge">200</span></li>
+            <li class="sidebar-item">Sejarah & Biografi <span class="badge">45</span></li>
+            <li class="sidebar-item">Hobi & Berkebun <span class="badge">30</span></li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    Copyright © 2026 PerPustakaIlmu
+</footer>
+
+</body>
+</html>

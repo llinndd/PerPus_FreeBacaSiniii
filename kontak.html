@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Kontak - Pustaka Ilmu</title>
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        /* Mengubah background keseluruhan menjadi krem lembut seperti di gambar */
+        background-color: #fdfbe7; 
+        color: #2b1d0c; 
+    }
+
+    header {
+        background: #4a3429; /* Cokelat gelap pekat */
+        color: white;
+        text-align: center;
+        padding: 30px;
+    }
+
+    header h1 {
+        margin: 0 0 10px 0;
+    }
+
+    header p {
+        text-align: center;
+        margin: 0;
+        color: #d7ccc8;
+    }
+	header p {
+            font-style: italic;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+    .menu {
+        background: #895129; /* Cokelat kayu hangat */
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu a {
+        color: #ffffff; 
+        text-decoration: none;
+        padding: 15px 25px;
+        font-weight: bold;
+    }
+
+    .menu a:hover {
+        background: #6e3f1f; 
+        color: white;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        background: #ffffff; /* Latar belakang putih bersih */
+        color: #2b1d0c; 
+        padding: 35px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+        border: 1px solid #c2e2cc; /* Border tipis hijau mint halus */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.02); 
+        box-sizing: border-box;
+    }
+
+    /* Mengubah warna H2 menjadi cokelat dengan garis bawah hijau mint */
+    h2 {
+        color: #895129; 
+        border-bottom: 2px solid #bceecb; 
+        padding-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 30px;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Warna teks label kolom informasi (Nama, Alamat, dst) */
+    td b {
+        color: #2d5a37; /* Hijau Kebun */
+    }
+
+    form label {
+        color: #2d5a37; /* Judul input form menjadi Hijau Kebun */
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* Styling elemen input & textarea agar rapi dan clean seperti di gambar */
+    input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        border: 1px solid #c2e2cc; 
+        background-color: #ffffff; 
+        color: #2b1d0c;
+        border-radius: 6px; 
+        margin-top: 8px;
+    }
+    
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: #2d5a37; 
+        box-shadow: 0 0 5px rgba(45, 90, 55, 0.2);
+    }
+
+    /* Tombol Kirim Pesan menjadi Hijau Kebun Lebar */
+    input[type=submit] {
+        width: 100%;
+        background: #2d5a37; 
+        color: white;
+        border: none;
+        padding: 14px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: background 0.2s;
+        margin-top: 10px;
+    }
+
+    input[type=submit]:hover {
+        background: #1e3d25; 
+    }
+
+    footer {
+        background: #4a3429; 
+        color: #d7ccc8;
+        text-align: center;
+        padding: 25px;
+        margin-top: 50px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Pustaka Ilmu</h1>
+
+<p>Portal Bacaan Digital Terlengkap</p>
+
+</header>
+
+<div class="menu">
+
+<a href="index.html">Beranda</a>
+
+<a href="profil.html">Profil</a>
+
+<a href="koleksi.html">Koleksi</a>
+
+<a href="kontak.html">Kontak</a>
+
+</div>
+
+<div class="container">
+
+<h2>Hubungi Kami</h2>
+
+<table>
+
+<tr>
+<td><b>Nama Pemilik</b></td>
+<td>Linda Rahmawati</td>
+</tr>
+
+<tr>
+<td><b>Alamat Toko</b></td>
+<td>Juai, Kab.Balangan, Kalimantan Selatan</td>
+</tr>
+
+<tr>
+<td><b>Telepon / WA</b></td>
+<td>0878-1234-5678</td>
+</tr>
+
+<tr>
+<td><b>Email Resmi</b></td>
+<td>lindarahmawati7736@gmail.com</td>
+</tr>
+
+<tr>
+<td><b>Website Resmi</b></td>
+<td>www.PerPusIlmu.ac.id</td>
+</tr>
+
+</table>
+
+<h2>Form Hubungi Kami</h2>
+
+<form>
+
+<label>Nama Lengkap</label>
+<input type="text" placeholder="Masukkan nama lengkap Anda...">
+
+<br><br>
+
+<label>Alamat Email</label>
+<input type="email" placeholder="Masukkan email aktif Anda...">
+
+<br><br>
+
+<label>Subjek Pesan</label>
+<input type="text" placeholder="Tuliskan subjek atau topik pesan...">
+
+<br><br>
+
+<label>Isi Pesan</label>
+<textarea rows="6" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."></textarea>
+
+<br><br>
+
+<input type="submit" value="KIRIM PESAN">
+
+</form>
+
+</div>
+
+<footer>
+
+Copyright © 2026 PerPustakaIlmu
+
+</footer>
+
+</body>
+
+</html>

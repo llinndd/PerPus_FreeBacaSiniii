@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Koleksi - Pustaka Ilmu</title>
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        /* Background krem lembut sesuai gambar */
+        background-color: #fdfbe7; 
+        color: #2b1d0c; 
+    }
+
+    /* Header menggunakan warna cokelat gelap pekat */
+    header {
+        background: #4a3429; 
+        color: #ffffff !important;
+        text-align: center;
+        padding: 30px;
+    }
+
+    header h1 {
+        color: #ffffff !important;
+        margin: 0 0 10px 0;
+    }
+
+    header p {
+        color: #d7ccc8 !important;
+        text-align: center;
+        margin: 0;
+    }
+	header p {
+            font-style: italic;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+    /* Menu navigasi cokelat medium hangat */
+    .menu {
+        background: #895129; 
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu a {
+        color: #ffffff; 
+        text-decoration: none;
+        padding: 15px 25px;
+        font-weight: bold;
+    }
+
+    .menu a:hover {
+        background: #6e3f1f; 
+        color: white;
+    }
+
+    /* Kontainer utama berwarna putih bersih dengan sudut melengkung halus */
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 35px 25px;
+        background-color: #ffffff; 
+        color: #2b1d0c;                                    
+        border-radius: 12px;              
+        margin-top: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.03);
+        box-sizing: border-box;
+        border: 1px solid #c2e2cc;
+    }
+
+    /* Judul menggunakan warna cokelat tanah dengan garis dekoratif hijau mint di bawahnya */
+    h2 {
+        text-align: center;
+        color: #895129; 
+        border-bottom: 2px solid #bceecb; 
+        padding-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    /* Teks deskripsi di bawah judul galeri */
+    .container p {
+        text-align: center;
+        color: #555555;
+        margin-bottom: 35px;
+        font-size: 15px;
+    }
+
+    /* Pembungkus kartu menggunakan susunan flexbox agar sejajar rapi */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    /* GAYA BARU: Desain Kartu Buku (Card) seperti di gambar */
+    .book-card {
+        background: #ffffff;
+        border: 1px solid #e2f0d9;
+        border-radius: 12px;
+        width: 260px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none; /* Menghilangkan underline default link */
+        color: inherit;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(45, 90, 55, 0.15);
+    }
+
+    /* Pengaturan gambar sampul agar konsisten ukurannya di dalam kartu */
+    .book-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Informasi detail buku di bawah gambar */
+    .book-title {
+        font-weight: bold;
+        font-size: 15px;
+        color: #2d5a37; /* Hijau Kebun */
+        margin: 5px 0;
+        line-height: 1.4;
+    }
+
+    .book-author {
+        font-size: 12px;
+        color: #777777;
+        margin-bottom: 8px;
+    }
+
+    .book-price {
+        font-weight: bold;
+        color: #895129; /* Cokelat Kayu */
+        font-size: 16px;
+        margin: 8px 0;
+    }
+
+    /* Tombol Aksi "Baca Sekarang" di bagian paling bawah kartu */
+    .btn-read {
+        background-color: #2d5a37; /* Hijau Kebun */
+        color: #ffffff;
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+        transition: background 0.2s;
+    }
+
+    .book-card:hover .btn-read {
+        background-color: #214429;
+    }
+
+    /* Footer menggunakan warna cokelat pekat */
+    footer {
+        clear: both;
+        background: #4a3429; 
+        color: #d7ccc8;
+        text-align: center;
+        padding: 25px;
+        margin-top: 50px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Pustaka Ilmu</h1>
+
+<p>Portal Bacaan Digital Terlengkap</p>
+
+</header>
+
+<div class="menu">
+
+<a href="index.html">Beranda</a>
+
+<a href="profil.html">Profil</a>
+
+<a href="koleksi.html">Koleksi</a>
+
+<a href="kontak.html">Kontak</a>
+
+</div>
+
+<div class="container">
+
+        <h2>Koleksi Buku Pustaka Ilmu</h2>
+        <p>
+            Silakan pilih dan klik sampul buku di bawah ini untuk mulai membaca secara online.
+        </p>
+
+        <div class="gallery">
+            
+            <!-- Kartu Buku 1 -->
+            <a href="baca-matematika.html" target="_blank" class="book-card">
+                <img src="buku1.jpeg" alt="Buku Pelajaran Matematika Diskrit">
+                <div class="book-title">Matematika Diskrit (Edisi Belajar)</div>
+                <div class="book-author">Tim Dosen IT</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+
+            <!-- Kartu Buku 2 -->
+            <a href="baca-sejarah-indo.html" target="_blank" class="book-card">
+                <img src="buku2.jpeg" alt="Buku Sejarah Kemerdekaan Indonesia">
+                <div class="book-title">Sejarah Indonesia Modern</div>
+                <div class="book-author">M.C. Ricklefs</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+
+            <!-- Kartu Buku 3 -->
+            <a href="baca-novel-laskar.html" target="_blank" class="book-card">
+                <img src="buku3.jpg" alt="Belajar Pemrogramman Web untuk Pemula">
+                <div class="book-title">Belajar Pemrograman Web untuk Pemula</div>
+                <div class="book-author">Kristianto Haryodi</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+
+            <!-- Kartu Buku 4 -->
+            <a href="baca-novel-menara.html" target="_blank" class="book-card">
+                <img src="buku4.jpeg" alt="Perancangan Basis Data">
+                <div class="book-title">Perancangan Basis Data</div>
+                <div class="book-author">Suhartini,S.Kom.,M.Kom.</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+			
+			<a href="baca-novel-menara.html" target="_blank" class="book-card">
+                <img src="buku5.jpeg" alt="Novel Negeri 5 Menara">
+                <div class="book-title">Novel Negeri 5 Menara</div>
+                <div class="book-author">A. Fuadi</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+			
+			<a href="baca-novel-menara.html" target="_blank" class="book-card">
+                <img src="buku6.jpeg" alt="Jika Kita tak pernah jadi Apa-apa">
+                <div class="book-title">Jika Kita tak pernah jadi Apa-apa</div>
+                <div class="book-author">Alvi Syahrin</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+			
+			<a href="baca-novel-menara.html" target="_blank" class="book-card">
+                <img src="buku7.jpeg" alt="Laut Bercerita">
+                <div class="book-title">Laut Bercerita</div>
+                <div class="book-author">Leila S. Chudori</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+			
+			<a href="baca-novel-menara.html" target="_blank" class="book-card">
+                <img src="buku8.jpeg" alt="Bandung After Rain">
+                <div class="book-title">Bandung After Rain</div>
+                <div class="book-author">Wulan Nur Amalia</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+			
+			<a href="baca-novel-menara.html" target="_blank" class="book-card">
+                <img src="buku9.jpeg" alt="Tanah Para Bandit">
+                <div class="book-title">Tanah Para Bandit</div>
+                <div class="book-author">Tereliye</div>
+                <div class="btn-read">Baca Sekarang</div>
+            </a>
+
+        </div>
+
+</div>
+
+<footer>
+
+Copyright © 2026 PerPustakaIlmu
+
+</footer>
+
+</body>
+
+</html>
